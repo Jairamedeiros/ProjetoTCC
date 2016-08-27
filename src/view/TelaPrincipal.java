@@ -27,72 +27,139 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jInternalFrameBemVindo = new javax.swing.JInternalFrame();
         jPanelInterno = new javax.swing.JPanel();
+        jButtonPsicologos = new javax.swing.JButton();
+        jButtonPacientes = new javax.swing.JButton();
+        jButtonAgenda = new javax.swing.JButton();
+        jLabelAgenda = new javax.swing.JLabel();
+        jLabelCadastro = new javax.swing.JLabel();
         jLabelPainelFundo = new javax.swing.JLabel();
         jLabelGerenciamento = new javax.swing.JLabel();
+        jButtonFecharPainel = new javax.swing.JButton();
         jLabelPlanoFundo = new javax.swing.JLabel();
         jMenuBar = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
-        jMenuItemGerente = new javax.swing.JMenuItem();
-        jMenuItemVendedor = new javax.swing.JMenuItem();
-        jMenuRelacao = new javax.swing.JMenu();
+        jMenuItemPsicologo = new javax.swing.JMenuItem();
+        jMenuItemPaciente = new javax.swing.JMenuItem();
+        jMenuFerramenta = new javax.swing.JMenu();
+        jMenuItemSistema = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jInternalFrame1.setVisible(true);
-        jInternalFrame1.getContentPane().setLayout(null);
+        jInternalFrameBemVindo.setVisible(true);
+        jInternalFrameBemVindo.getContentPane().setLayout(null);
 
         jPanelInterno.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanelInterno.setLayout(null);
 
+        jButtonPsicologos.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"));
+        jButtonPsicologos.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonPsicologos.setForeground(new java.awt.Color(0, 0, 102));
+        jButtonPsicologos.setText("Psicologos");
+        jPanelInterno.add(jButtonPsicologos);
+        jButtonPsicologos.setBounds(20, 80, 100, 23);
+
+        jButtonPacientes.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"));
+        jButtonPacientes.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButtonPacientes.setForeground(new java.awt.Color(0, 0, 102));
+        jButtonPacientes.setText("Pacientes");
+        jPanelInterno.add(jButtonPacientes);
+        jButtonPacientes.setBounds(150, 80, 100, 23);
+
+        jButtonAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/AGENDA.png"))); // NOI18N
+        jPanelInterno.add(jButtonAgenda);
+        jButtonAgenda.setBounds(20, 170, 40, 40);
+
+        jLabelAgenda.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelAgenda.setForeground(new java.awt.Color(0, 0, 102));
+        jLabelAgenda.setText("Agenda:");
+        jPanelInterno.add(jLabelAgenda);
+        jLabelAgenda.setBounds(20, 140, 60, 20);
+
+        jLabelCadastro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabelCadastro.setForeground(new java.awt.Color(0, 0, 102));
+        jLabelCadastro.setText("Cadastros:");
+        jPanelInterno.add(jLabelCadastro);
+        jLabelCadastro.setBounds(20, 40, 80, 20);
+
         jLabelPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/conf1.png"))); // NOI18N
         jPanelInterno.add(jLabelPainelFundo);
-        jLabelPainelFundo.setBounds(0, 10, 1000, 290);
+        jLabelPainelFundo.setBounds(0, 0, 1010, 300);
 
-        jInternalFrame1.getContentPane().add(jPanelInterno);
+        jInternalFrameBemVindo.getContentPane().add(jPanelInterno);
         jPanelInterno.setBounds(0, 30, 1000, 300);
 
         jLabelGerenciamento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelGerenciamento.setText("Sistema de Gerenciamento");
-        jInternalFrame1.getContentPane().add(jLabelGerenciamento);
-        jLabelGerenciamento.setBounds(0, 0, 390, 30);
+        jInternalFrameBemVindo.getContentPane().add(jLabelGerenciamento);
+        jLabelGerenciamento.setBounds(0, 0, 330, 30);
 
-        getContentPane().add(jInternalFrame1);
-        jInternalFrame1.setBounds(0, 110, 1020, 360);
+        jButtonFecharPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
+        jButtonFecharPainel.setToolTipText("Fechar tela");
+        jButtonFecharPainel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFecharPainelActionPerformed(evt);
+            }
+        });
+        jInternalFrameBemVindo.getContentPane().add(jButtonFecharPainel);
+        jButtonFecharPainel.setBounds(970, 0, 30, 30);
 
-        jLabelPlanoFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/paln1.png"))); // NOI18N
+        getContentPane().add(jInternalFrameBemVindo);
+        jInternalFrameBemVindo.setBounds(0, 110, 1020, 360);
+
+        jLabelPlanoFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/PlanoFundoPrincipal.png"))); // NOI18N
         getContentPane().add(jLabelPlanoFundo);
         jLabelPlanoFundo.setBounds(0, 0, 1020, 470);
 
         jMenuCadastro.setText("Cadastro");
 
-        jMenuItemGerente.setText("Gerente");
-        jMenuCadastro.add(jMenuItemGerente);
+        jMenuItemPsicologo.setText("Psicologo");
+        jMenuCadastro.add(jMenuItemPsicologo);
 
-        jMenuItemVendedor.setText("Vendedor");
-        jMenuCadastro.add(jMenuItemVendedor);
+        jMenuItemPaciente.setText("Paciente");
+        jMenuCadastro.add(jMenuItemPaciente);
 
         jMenuBar.add(jMenuCadastro);
 
-        jMenuRelacao.setText("Relação");
-        jMenuBar.add(jMenuRelacao);
+        jMenuFerramenta.setText("Ferramenta");
+
+        jMenuItemSistema.setText("Sistema Gerenciamento");
+        jMenuFerramenta.add(jMenuItemSistema);
+
+        jMenuBar.add(jMenuFerramenta);
 
         jMenuSair.setText("Sair");
 
         jMenuItemSair.setText("Sair");
+        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSairActionPerformed(evt);
+            }
+        });
         jMenuSair.add(jMenuItemSair);
 
         jMenuBar.add(jMenuSair);
 
         setJMenuBar(jMenuBar);
 
-        setSize(new java.awt.Dimension(1039, 536));
+        setSize(new java.awt.Dimension(1032, 536));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonFecharPainelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFecharPainelActionPerformed
+       jInternalFrameBemVindo.dispose();
+        
+        
+        
+    }//GEN-LAST:event_jButtonFecharPainelActionPerformed
+
+    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,16 +197,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JButton jButtonAgenda;
+    private javax.swing.JButton jButtonFecharPainel;
+    private javax.swing.JButton jButtonPacientes;
+    private javax.swing.JButton jButtonPsicologos;
+    private javax.swing.JInternalFrame jInternalFrameBemVindo;
+    private javax.swing.JLabel jLabelAgenda;
+    private javax.swing.JLabel jLabelCadastro;
     private javax.swing.JLabel jLabelGerenciamento;
     private javax.swing.JLabel jLabelPainelFundo;
     private javax.swing.JLabel jLabelPlanoFundo;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenu jMenuCadastro;
-    private javax.swing.JMenuItem jMenuItemGerente;
+    private javax.swing.JMenu jMenuFerramenta;
+    private javax.swing.JMenuItem jMenuItemPaciente;
+    private javax.swing.JMenuItem jMenuItemPsicologo;
     private javax.swing.JMenuItem jMenuItemSair;
-    private javax.swing.JMenuItem jMenuItemVendedor;
-    private javax.swing.JMenu jMenuRelacao;
+    private javax.swing.JMenuItem jMenuItemSistema;
     private javax.swing.JMenu jMenuSair;
     private javax.swing.JPanel jPanelInterno;
     // End of variables declaration//GEN-END:variables

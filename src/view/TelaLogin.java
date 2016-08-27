@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jaira Medeiros
@@ -55,6 +57,11 @@ public class TelaLogin extends javax.swing.JFrame {
         jButtonCancelar.setMaximumSize(new java.awt.Dimension(77, 23));
         jButtonCancelar.setMinimumSize(new java.awt.Dimension(77, 23));
         jButtonCancelar.setPreferredSize(new java.awt.Dimension(77, 23));
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonCancelar);
         jButtonCancelar.setBounds(190, 150, 90, 23);
 
@@ -80,13 +87,21 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAcessarActionPerformed
-        // TODO add your handling code here:
+        if(jTextFieldUsuario.getText().equals("admin")&& jPasswordFieldSenha.getText().equals("123")){       
         TelaPrincipal tela = new TelaPrincipal();
         tela.setVisible(true);
         dispose();
         
- 
+        }else{        
+            JOptionPane.showMessageDialog(rootPane, "Usuário ou senha inválidos!");
+        
+        }
     }//GEN-LAST:event_jButtonAcessarActionPerformed
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+       System.exit(0);
+      
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     /**
      * @param args the command line arguments
